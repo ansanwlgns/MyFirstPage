@@ -1,10 +1,10 @@
 class Drop{
-    
+
     constructor(){
         this.x = random(150,width-20);
         this.y = random(-200,-100);
         this.z = random(0,10);
-        this.yspeed = map(this.z,0,5,2,1);        
+        this.yspeed = map(this.z,0,5,2,1);
     }
     fall(){
         this.y = this.y + this.yspeed/3;
@@ -32,12 +32,12 @@ function setup()
     {
         drops[i] = new Drop();
     }
-    
+
 }
 
 function draw()
 {
-    background(200,230,250);
+    background(100,100,250);
   rect(0, 30, 30, 50);
   line(0, 60, 30, 60)
   rect(70, 30, 30, 50);
@@ -48,7 +48,7 @@ function draw()
     {
         drops[i].fall();
         drops[i].show();
-      
+
     }
     if (mouseIsPressed) {
     fill(230,230,250);
